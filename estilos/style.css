@@ -18,7 +18,7 @@ body {
 }
 
 .apresentacao {
-    margin: 10% 15%;
+    padding: 10% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,17 +43,56 @@ body {
 
 .apresentacao_links {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+    gap: 32px;
 }
 
 .apresentacao_links_link {
-    background-color: rgb(219, 188, 11);
+    /* background-color: rgb(219, 188, 11); atalho Ctrl+k+c */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
     font-family: 'Montserrat', sans-serif;
-    width: 280px;
+    width: 378px;
     text-align: center;
     padding: 21.5px 0;
-    border-radius: 16px;
+    border-radius: 8px;
     text-decoration: none;
-    color: black;
+    color: #f6f6f6;
     font-weight: 600;
+    font-size: 24px;
+    border: 2px solid rgb(219, 188, 11);
+}
+.apresentacao_links_subtitulo{
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.apresentacao_links_link:hover{
+    background-color: dimgray;
+}
+.rodape{
+    color: black;
+    background-color: rgb(219, 188, 11);
+    padding: 24px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+.cabecalho_menu_link{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(219, 188, 11);
+    text-decoration: none;
+
+}
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+.cabecalho_menu{
+    gap: 80px;
+    display: flex;
 }
