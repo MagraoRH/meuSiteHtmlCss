@@ -1,0 +1,6 @@
+Successfully deployed to the following URLs:
+
+meu-site-html-css – ./
+meu-site-html-css.vercel.app
+meu-site-html-css-git-main-magraorh.vercel.app
+meu-site-html-css-magraorh.vercel.app
