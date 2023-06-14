@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
+:root {
+    --cor-primaria: rgb(24, 24, 24);
+    --cor-segundaria: white;
+    --cor-terciaria: rgb(219, 188, 11);
+
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-segundaria: 'Montserrat', sans-serif;
+
+    /* este root são basicamente variaveis para setar cores e fontes,
+    não esta sendo utilizado neste projeto mas esta aqui como
+    exemplo */
+}
 
 body {
     height: 100vh;
@@ -22,22 +34,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .apresentacao_conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .apresentacao_conteudo_titulo {
-    font-size: 36px;
+
+    /*as medidas REM são calculadas da seguinte forma,
+    pega quantidade de px e divide por 16 isso vai
+    converter para rem fazendo com que a medida dos
+    textos escritos se adequade a qualquer dispositivo*/
+
+    font-size: 2.25rem;
     font-family: 'Krona One', sans-serif;
 }
 
 .apresentacao_conteudo_texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -49,50 +68,84 @@ body {
     gap: 32px;
 }
 
-.apresentacao_links_link {
+.apresentacao_links_navegacao {
     /* background-color: rgb(219, 188, 11); atalho Ctrl+k+c */
     display: flex;
     justify-content: center;
     gap: 16px;
     font-family: 'Montserrat', sans-serif;
-    width: 378px;
+    width: 50%;
     text-align: center;
     padding: 21.5px 0;
     border-radius: 8px;
     text-decoration: none;
     color: #f6f6f6;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
     border: 2px solid rgb(219, 188, 11);
 }
-.apresentacao_links_subtitulo{
+
+.apresentacao_links_subtitulo {
     font-family: 'Krona One', sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
-.apresentacao_links_link:hover{
+
+.apresentacao_links_link:hover {
     background-color: dimgray;
 }
-.rodape{
+
+.rodape {
     color: black;
     background-color: rgb(219, 188, 11);
-    padding: 24px;
+    padding: 1.5rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
 }
-.cabecalho_menu_link{
+
+.cabecalho_menu_link {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: rgb(219, 188, 11);
     text-decoration: none;
 
 }
-.cabecalho{
+
+.cabecalho {
     padding: 2% 0% 0% 15%;
 }
-.cabecalho_menu{
+
+.cabecalho_menu {
     gap: 80px;
     display: flex;
+}
+
+.apresentacao_imagem {
+    width: 50%;
+}
+
+/*@media serve para inserir uma imagem por exemplo na mesma linha
+que os textos a medida em que a pagina for diminuindo de tamanho
+ou seja, o max pega a medida maxima aceitavel e quando ultrapassa ela
+é aplicado o media para colocar a imagem entre os textos*/
+
+@media (max-width: 1200px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+    }
+
+    .apresentacao_conteudo {
+        width: auto;
+    }
 }
